@@ -1,3 +1,4 @@
+/*
 import React from "react";
 import Link from "next/link";
 
@@ -28,8 +29,43 @@ const Header: React.FC = () => {
 					</div>
 				</div>
 
-				{/* Rest of your header content (search bar, filters, etc.) */}
+				
 			</div>
+		</header>
+	);
+};
+
+export default Header;
+*/
+import Link from "next/link";
+
+const Header = () => {
+	return (
+		<header className="bg-white shadow-sm">
+			<nav className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div className="flex justify-between h-16">
+					<div className="flex space-x-8">
+						<Link
+							href="/home"
+							className="inline-flex items-center px-1 pt-1 border-b-2 border-blue-500 text-sm font-medium text-gray-900"
+						>
+							Home
+						</Link>
+						<Link
+							href="/about"
+							className="inline-flex items-center px-1 pt-1 border-b-2 border-transparent hover:border-gray-300 text-sm font-medium text-gray-500 hover:text-gray-700"
+						>
+							About
+						</Link>
+						<Link
+							href="/posts"
+							className="inline-flex items-center px-1 pt-1 border-b-2 border-transparent hover:border-gray-300 text-sm font-medium text-gray-500 hover:text-gray-700"
+						>
+							Posts
+						</Link>
+					</div>
+				</div>
+			</nav>
 		</header>
 	);
 };

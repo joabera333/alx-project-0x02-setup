@@ -14,7 +14,7 @@ const AboutPage: React.FC = () => {
 
 export default AboutPage;
 
-*/
+
 
 import Button from "@/components/common/Button";
 import Head from "next/head";
@@ -61,5 +61,25 @@ export default function About() {
 				</div>
 			</div>
 		</div>
+	);
+}
+
+*/
+
+import Head from "next/head";
+import Header from "@/components/layout/Header";
+
+export default function About() {
+	return (
+		<>
+			<Head>
+				<title>About Page</title>
+			</Head>
+			<Header />
+			<main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+				<h1 className="text-3xl font-bold mb-6">About Us</h1>
+				<p className="text-lg">Learn more about our company and mission.</p>
+			</main>
+		</>
 	);
 }
