@@ -1,3 +1,4 @@
+/*
 import React from "react";
 
 const AboutPage: React.FC = () => {
@@ -12,3 +13,53 @@ const AboutPage: React.FC = () => {
 };
 
 export default AboutPage;
+
+*/
+
+import Button from "@/components/common/Button";
+import Head from "next/head";
+
+export default function About() {
+	return (
+		<div className="min-h-screen p-8">
+			<Head>
+				<title>About Page - Button Examples</title>
+			</Head>
+
+			<h1 className="text-3xl font-bold mb-8">Button Component Examples</h1>
+
+			<div className="space-y-6">
+				<div className="space-x-4">
+					<h2 className="text-xl font-semibold mb-2">Size Variations</h2>
+					<Button size="small">Small Button</Button>
+					<Button size="medium">Medium Button</Button>
+					<Button size="large">Large Button</Button>
+				</div>
+
+				<div className="space-x-4">
+					<h2 className="text-xl font-semibold mb-2">Shape Variations</h2>
+					<Button shape="rounded-sm">Rounded Small</Button>
+					<Button shape="rounded-md">Rounded Medium</Button>
+					<Button shape="rounded-full">Rounded Full</Button>
+				</div>
+
+				<div className="space-x-4">
+					<h2 className="text-xl font-semibold mb-2">Combinations</h2>
+					<Button size="small" shape="rounded-full">
+						Small Pill
+					</Button>
+					<Button size="large" shape="rounded-sm">
+						Large Square
+					</Button>
+					<Button
+						size="medium"
+						shape="rounded-full"
+						className="bg-green-500 hover:bg-green-600"
+					>
+						Custom Color
+					</Button>
+				</div>
+			</div>
+		</div>
+	);
+}
